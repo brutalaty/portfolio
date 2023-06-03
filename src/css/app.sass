@@ -1,0 +1,21 @@
+// app global css in Sass form
+.body
+  &--light
+    background: $light-page
+    color: $light-page-text
+  &--dark
+    background: $dark-page
+    color: $dark-page-text
+
+//Header
+.q-toolbar
+  justify-content: center
+  &__title
+    @include max-page-width
+
+//content
+.q-page
+  @include max-page-width
+  &-container
+    display: flex
+    justify-content: center
