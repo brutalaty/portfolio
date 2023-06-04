@@ -3,6 +3,7 @@ installQuasarPlugin();
 
 import { VueWrapper, mount } from '@vue/test-utils';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { getRouter } from 'vue-router-mock';
 
 import ProjectListItem from './ProjectListItem.vue';
 import TechnologyList from './TechnologyList.vue';
@@ -52,27 +53,32 @@ describe('group', () => {
   });
 
   describe('external link', () => {
-    const findExternalLink = () => wrapper.find('[data-test="external-url"]');
+    const url = 'https://somerandomwebsite.gov';
+    beforeEach(() => {
+      createComponent({ external_url: url });
+    });
+
+    const findExternalLinkButton = () =>
+      wrapper.find('[data-test="external-link-button"]');
 
     describe('when the project does not have an external link', () => {
+      beforeEach(() => createComponent());
+
       it('should not render a link', () => {
-        expect(findExternalLink().exists()).toBe(false);
+        expect(findExternalLinkButton().exists()).toBe(false);
       });
     });
 
     describe('when a project has an external_url', () => {
-      const url = 'https://somerandomwebsite.gov';
-      beforeEach(() => {
-        createComponent({ external_url: url });
-      });
       it('renders a link to that url', () => {
-        expect(findExternalLink().exists()).toBe(true);
-        expect(findExternalLink().attributes('href')).equals(url);
+        expect(findExternalLinkButton().exists()).toBe(true);
+        expect(findExternalLinkButton().attributes('href')).equals(url);
       });
-      describe('when clicked', () => {
-        it('opens in a new window or tab', () => {
-          expect(findExternalLink().attributes('target')).equals('_blank');
-        });
+    });
+
+    describe('when clicked', () => {
+      it('opens in a new window or tab', () => {
+        expect(findExternalLinkButton().attributes('target')).equals('_blank');
       });
     });
   });

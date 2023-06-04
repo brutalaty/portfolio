@@ -4,7 +4,7 @@
     <div class="project-links">
       <q-btn
         v-if="!!project.external_url"
-        data-test="external-url"
+        data-test="external-link-button"
         outline
         color="primary"
         label="External Link"
