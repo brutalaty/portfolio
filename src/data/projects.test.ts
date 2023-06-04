@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
+import { Project } from 'src/types/project';
 import projectGroups from 'src/data/projects';
 
 describe('ProjectGroups', () => {
@@ -20,34 +21,40 @@ describe('ProjectGroups', () => {
   });
 });
 
-describe("every single project's", () => {
+describe('Projects', () => {
+  const projects: Array<Project> = projectGroups
+    .map((projectGroup) => {
+      return projectGroup.projects;
+    })
+    .flat();
+
   describe('name', () => {
     it('is never an empty string', () => {
-      projectGroups.forEach((projectGroup) => {
-        projectGroup.projects.forEach((project) => {
-          expect(project.name).toBeTruthy();
-        });
+      projects.forEach((project) => {
+        expect(project.name).toBeTruthy();
       });
     });
   });
 
   describe('description', () => {
     it('is never an empty string', () => {
-      projectGroups.forEach((projectGroup) => {
-        projectGroup.projects.forEach((project) => {
-          expect(project.description).toBeTruthy();
-        });
+      projects.forEach((project) => {
+        expect(project.description).toBeTruthy();
       });
     });
   });
 
   describe('technologies', () => {
     it('is never an empty array', () => {
-      projectGroups.forEach((projectGroup) => {
-        projectGroup.projects.forEach((project) => {
-          expect(project.technologies.length).toBeGreaterThan(0);
-        });
+      projects.forEach((project) => {
+        expect(project.technologies.length).toBeGreaterThan(0);
       });
+    });
+  });
+
+  describe('route_name', () => {
+    describe('when set', () => {
+      it.todo('exists on the router');
     });
   });
 });
