@@ -52,6 +52,36 @@ describe('group', () => {
     );
   });
 
+  describe('router link', () => {
+    const route_name = 'test-route';
+    beforeEach(() => createComponent({ route_name: route_name }));
+
+    const findRouterLinkButton = () =>
+      wrapper.find('[data-test="router-link-button"]');
+
+    describe('when the project does not have a route_name', () => {
+      beforeEach(() => createComponent());
+
+      it('should not render a route link button', () => {
+        expect(findRouterLinkButton().exists()).toBe(false);
+      });
+    });
+
+    describe('when the project has a route_name', () => {
+      it('renders a router link button', () => {
+        expect(findRouterLinkButton().exists()).toBe(true);
+      });
+    });
+
+    describe('when clicked', () => {
+      it('push route_name to the router', async () => {
+        await findRouterLinkButton().trigger('click');
+
+        expect(getRouter().push).toHaveBeenCalledWith({ name: route_name });
+      });
+    });
+  });
+
   describe('external link', () => {
     const url = 'https://somerandomwebsite.gov';
     beforeEach(() => {

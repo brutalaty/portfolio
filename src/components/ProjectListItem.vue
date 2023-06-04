@@ -3,6 +3,13 @@
     <h3>{{ project.name }}</h3>
     <div class="project-links">
       <q-btn
+        v-if="!!project.route_name"
+        data-test="router-link-button"
+        label="More"
+        color="primary"
+        @click="handleRouteButtonClick"
+      />
+      <q-btn
         v-if="!!project.external_url"
         data-test="external-link-button"
         outline
@@ -20,9 +27,12 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter, Router } from 'vue-router';
 import { PropType } from 'vue';
 import { Project } from 'src/types/project';
 import TechnologyList from './TechnologyList.vue';
+
+const router: Router = useRouter();
 
 const props = defineProps({
   project: {
@@ -30,4 +40,9 @@ const props = defineProps({
     type: Object as PropType<Project>,
   },
 });
+
+function handleRouteButtonClick() {
+  if (!!props.project.route_name)
+    router.push({ name: props.project.route_name });
+}
 </script>
