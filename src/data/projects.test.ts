@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import { Project } from 'src/types/project';
 import projectGroups from 'src/data/projects';
+import routes from 'src/router/routes';
 
 describe('ProjectGroups', () => {
   describe('title', () => {
@@ -53,8 +54,16 @@ describe('Projects', () => {
   });
 
   describe('route_name', () => {
+    const allRoutes = routes[0].children?.map((route) => route.name);
+    const projectsWithRoutes = [...projects].filter(
+      (project) => project.route_name !== undefined
+    );
     describe('when set', () => {
-      it.todo('exists on the router');
+      it('exists on the router', () => {
+        projectsWithRoutes.forEach((project) => {
+          expect(allRoutes).toContain(project.route_name);
+        });
+      });
     });
   });
 });
