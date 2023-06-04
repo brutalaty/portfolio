@@ -27,6 +27,7 @@ const projects: ProjectGroup[] = [
         description:
           'This application lets the players see the blind and chip values. It also allows the Tournament Director to manipulate the timer. This is for offline use and is bundled into the Poker Management Thick client application.',
         technologies: [technologies.vue2, technologies.scss],
+        route_name: 'poker-game-clock'
       },
 
       {
