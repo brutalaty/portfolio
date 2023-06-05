@@ -25,10 +25,10 @@ describe('group', () => {
     createComponent();
   });
 
-  const createComponent = (overrideProject = {}) => {
+  const createComponent = (overrideProjectFields = {}) => {
     wrapper = mount(ProjectListItem, {
       props: {
-        project: { ...project, ...overrideProject },
+        project: { ...project, ...overrideProjectFields },
       },
     });
   };
