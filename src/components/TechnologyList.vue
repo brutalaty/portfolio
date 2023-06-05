@@ -13,7 +13,7 @@ import { PropType } from 'vue';
 import TechnologyListItem from './TechnologyListItem.vue';
 import Technology from 'src/types/technology';
 
-const props = defineProps({
+defineProps({
   technologies: {
     required: true,
     type: Array as PropType<Technology[]>,

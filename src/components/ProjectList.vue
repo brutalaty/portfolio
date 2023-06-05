@@ -13,7 +13,7 @@ import { PropType } from 'vue';
 import { Project } from 'src/types/project';
 import ProjectListItem from './ProjectListItem.vue';
 
-const props = defineProps({
+defineProps({
   projects: {
     required: true,
     type: Array as PropType<Project[]>,
