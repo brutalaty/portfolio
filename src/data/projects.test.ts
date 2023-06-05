@@ -66,4 +66,25 @@ describe('Projects', () => {
       });
     });
   });
+
+  describe('repository', () => {
+    const projectsWithRepositories = [...projects].filter(
+      (project) => project.repository !== undefined
+    );
+
+    describe('when set', () => {
+      it('is never empty', () => {
+        projectsWithRepositories.forEach((project) => {
+          expect(project.repository).toBeTruthy();
+        });
+      });
+
+      it('start with https', () => {
+        projectsWithRepositories.forEach((project) => {
+          if (project.repository)
+            expect(/^http/.test(project.repository)).toBe(true);
+        });
+      });
+    });
+  });
 });

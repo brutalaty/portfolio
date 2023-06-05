@@ -3,10 +3,11 @@ import Technology from './technology';
 interface Project {
   name: string;
   description: string;
+  technologies: Technology[];
   route_name?: string;
   external_url?: string;
   date?: string | null;
-  technologies: Technology[];
+  repository?: string;
 }
 
 interface ProjectGroup {
