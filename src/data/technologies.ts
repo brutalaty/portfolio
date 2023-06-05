@@ -1,6 +1,6 @@
 import Technology from 'src/types/technology';
 
-type TechnologiesDeclared =
+export type TechnologiesDeclared =
   | 'typescript'
   | 'vitest'
   | 'vue2'
@@ -17,7 +17,7 @@ type TechnologiesDeclared =
 
 type Technologies = Record<TechnologiesDeclared, Technology>;
 
-const technologies: Technologies = {
+export const technologies: Technologies = {
   typescript: { name: 'TS', backgroundColor: '#3178c6', textColor: '#ffffff' },
   vitest: { name: 'Vitest', backgroundColor: '#1e1e20', textColor: '#6da13f' },
   vue2: { name: 'Vue 2', backgroundColor: '#00aa00', textColor: '#ffffff' },
@@ -42,4 +42,3 @@ const technologies: Technologies = {
 };
 
 export default technologies;
-export type { TechnologiesDeclared };
