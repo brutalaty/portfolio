@@ -1,0 +1,29 @@
+<template>
+  <q-btn
+    data-test="repository-link-button"
+    :href="url"
+    target="_blank"
+    rounded
+    color="white"
+    class="github-button q-pa-none no-border"
+  >
+    <img class="github-mark" src="images/github-mark/github-mark.svg" />
+  </q-btn>
+</template>
+
+<script setup lang="ts">
+defineProps({
+  url: {
+    required: true,
+    type: String,
+  },
+});
+</script>
+
+<style lang="sass">
+.github-button
+  margin: 1px
+.github-mark
+    margin: -1px
+    max-width: 40px
+</style>

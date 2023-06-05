@@ -9,6 +9,9 @@
         color="primary"
         @click="handleRouteButtonClick"
       />
+
+      <GithubButton v-if="!!project.repository" :url="project.repository" />
+
       <q-btn
         v-if="!!project.external_url"
         data-test="external-link-button"
@@ -31,6 +34,7 @@ import { useRouter, Router } from 'vue-router';
 import { PropType } from 'vue';
 import { Project } from 'src/types/project';
 import TechnologyList from './TechnologyList.vue';
+import GithubButton from './GithubButton.vue';
 
 const router: Router = useRouter();
 

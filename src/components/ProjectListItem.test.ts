@@ -112,4 +112,38 @@ describe('group', () => {
       });
     });
   });
+
+  describe('repository link', () => {
+    const repository = 'https://github.com/brutalaty/baby-daily-back';
+    beforeEach(() => createComponent({ repository: repository }));
+
+    const findRepositoryLinkButton = () =>
+      wrapper.find('[data-test="repository-link-button"]');
+
+    describe('when the project does not have a repository', () => {
+      it('does not render a repository', () => {
+        createComponent();
+
+        expect(findRepositoryLinkButton().exists()).toBe(false);
+      });
+    });
+
+    describe('when the project has a repository', () => {
+      it('renders a repository button', () => {
+        expect(findRepositoryLinkButton().exists()).toBe(true);
+      });
+
+      it('the button has an href set to the projects repository', () => {
+        expect(findRepositoryLinkButton().attributes('href')).toBe(repository);
+      });
+
+      describe('when clicked', () => {
+        it('opens in a new tab or window', () => {
+          expect(findRepositoryLinkButton().attributes('target')).toBe(
+            '_blank'
+          );
+        });
+      });
+    });
+  });
 });
