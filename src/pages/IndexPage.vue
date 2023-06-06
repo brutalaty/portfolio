@@ -3,7 +3,9 @@
     <h1>Joshua Ditton</h1>
     <section>
       <div v-for="projectGroup in projectGroups" :key="projectGroup.title">
-        <h2 data-test="project-group-heading">{{ projectGroup.title }}</h2>
+        <h2 data-test="project-group-heading" class="text-center">
+          {{ projectGroup.title }}
+        </h2>
         <ProjectList :projects="projectGroup.projects" />
       </div>
     </section>

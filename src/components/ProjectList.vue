@@ -1,9 +1,10 @@
 <template>
-  <div class="project-list">
+  <div class="project-list flex row justify-around q-gutter-y-xl items-start">
     <ProjectListItem
       v-for="project in projects"
       :project="project"
       :key="project.name"
+      class="col-12 col-md-5"
     />
   </div>
 </template>
@@ -20,3 +21,8 @@ defineProps({
   },
 });
 </script>
+
+<style lang="sass">
+.project-list
+  margin-bottom: 5rem
+</style>
