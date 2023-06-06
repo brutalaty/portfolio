@@ -64,7 +64,7 @@ export const portfolio = {
 export const projects: ProjectGroup[] = [
   {
     title: 'Current Projects',
-    projects: [babyDaily],
+    projects: [babyDaily, portfolio],
   },
 
   {
@@ -72,10 +72,10 @@ export const projects: ProjectGroup[] = [
     projects: [pokerGameClock, pokerThickClient, pokerSPA, pokerAPI],
   },
 
-  {
-    title: 'Other Projects',
-    projects: [portfolio],
-  },
+  // {
+  //   title: 'Other Projects',
+  //   projects: [portfolio],
+  // },
 ];
 
 export default projects;
