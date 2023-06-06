@@ -4,7 +4,9 @@
     :href="url"
     target="_blank"
     rounded
+    dense
     color="white"
+    size="13px"
     class="github-button q-pa-none no-border"
   >
     <img class="github-mark" src="images/github-mark/github-mark.svg" />
@@ -21,9 +23,7 @@ defineProps({
 </script>
 
 <style lang="sass">
-.github-button
-  margin: 1px
 .github-mark
-    margin: -1px
-    max-width: 40px
+  margin: -1px
+  width: 30px
 </style>
