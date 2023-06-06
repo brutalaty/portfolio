@@ -4,14 +4,25 @@
       v-if="showHomeButton"
       data-test="home-link-button"
       icon="fa-solid fa-house"
+      color="primary"
+      rounded
+      dense
+      size="8px"
+      padding="7px"
+      class="q-mr-md"
       @click="handleHomeButtonClick"
     />
 
     <q-btn
       v-else-if="!!project.route_name"
       data-test="router-link-button"
-      label="More"
+      icon="fa-solid fa-info"
       color="primary"
+      rounded
+      dense
+      size="8px"
+      padding="7px"
+      class="q-mr-md"
       @click="handleRouteButtonClick"
     />
 
@@ -20,9 +31,12 @@
     <q-btn
       v-if="!!project.external_url"
       data-test="external-link-button"
-      outline
       color="primary"
-      label="External Link"
+      icon="fa-solid fa-up-right-from-square"
+      rounded
+      dense
+      size="8px"
+      padding="7px"
       :href="project.external_url"
       target="_blank"
     />
@@ -54,3 +68,5 @@ function handleHomeButtonClick() {
   router.push('/');
 }
 </script>
+
+<style lang="sass" scoped></style>
