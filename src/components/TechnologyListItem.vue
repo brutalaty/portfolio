@@ -1,5 +1,5 @@
 <template>
-  <q-chip class="technology-item" :style="style">
+  <q-chip class="technology-item" :style="style" :clickable="false" square>
     {{ technology.name }}
   </q-chip>
 </template>
