@@ -14,31 +14,31 @@ export const babyDaily: Project = {
 };
 
 export const pokerGameClock = {
-  name: 'Game Clock',
+  name: 'Poker Game Clock',
   description:
-    'This application lets the players see the blind and chip values. It also allows the Tournament Director to manipulate the timer. This is for offline use and is bundled into the Poker Management Thick client application.',
+    'This application lets the players see the blind and chip values. It also allows the Tournament Director to manipulate the timer. This is for offline use and is bundled into the Poker Thick Client application.',
   technologies: [technologies.vue2, technologies.scss],
   route_name: 'poker-game-clock',
   repository: 'https://github.com/brutalaty/poker-game-clock',
 };
 
 export const pokerThickClient = {
-  name: 'Thick client',
+  name: 'Poker Thick client',
   description:
-    'Part of a Poker League management application. This Java application was built with an Offline First approach. Not all venues that host Poker Tournaments have internet access, this application allows for synchronisation between the client and server and allows tournament directors to take control over any resulting conflicts. This application also has the administration UI built into it for the authorised users to make changes to their League',
+    'This is an Offline First desktop application. It allows tournament directors to add new player and record tournament results. It also houses an online only area for administration of every aspect of the Poker League',
   technologies: [technologies.java, technologies.sqlite],
 };
 
 export const pokerSPA = {
-  name: 'SPA',
+  name: 'Poker SPA',
   description:
-    'The public facing SPA Website that displays the tournament results, tournament leaderboards, venues, weekly tournaments and player statistics.',
+    'The public facing SPA Website that is designed for the players to be able to view tournament results, leaderboards, weekly tournament schedules, upcoming major events and some player statistics',
   technologies: [technologies.vue2, technologies.scss],
   external_url: 'https://eastcoastpoker.com.au',
 };
 
 export const pokerAPI = {
-  name: 'API',
+  name: 'Poker API',
   description:
     'A Codeigniter API that serves both the front end Vue2 website and the Offline First Java thick client.',
   technologies: [
