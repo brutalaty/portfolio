@@ -2,7 +2,7 @@
   <q-page>
     <h1>Poker League Game Clock</h1>
 
-    <ProjectNavigationBar :project="project" show-home-button />
+    <ProjectPageNavigation :project="project" show-home-button />
 
     <div class="flex">
       <q-card class="q-my-lg card text-center">
@@ -86,8 +86,10 @@
 </template>
 
 <script setup lang="ts">
-import ProjectNavigationBar from 'src/components/ProjectNavigationBar.vue';
+import ProjectPageNavigation from 'src/components/ProjectPageNavigation.vue';
 import { pokerGameClock as project } from 'src/data/projects';
+
+//clone data, remove route_name?
 </script>
 
 <style lang="sass" scoped>
