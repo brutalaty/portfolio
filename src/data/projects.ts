@@ -1,8 +1,8 @@
 import { ProjectGroup, Project } from 'src/types/project';
 import { technologies } from './technologies';
 
-export const babyDaily: Project = {
-  name: 'Baby Daily',
+export const babyDailyFront: Project = {
+  name: 'Baby Daily SPA',
   description: 'Baby Daily App to record poops, feeds, medicine intake',
   technologies: [
     technologies.vue3,
@@ -11,6 +11,14 @@ export const babyDaily: Project = {
     technologies.typescript,
     technologies.vitest,
   ],
+  repository: 'https://github.com/brutalaty/baby-daily-front',
+};
+
+export const babyDailyBack: Project = {
+  name: 'Baby Daily API',
+  description: 'Baby Daily App to record poops, feeds, medicine intake',
+  technologies: [technologies.laravel, technologies.phpunit],
+  repository: 'https://github.com/brutalaty/baby-daily-back',
 };
 
 export const pokerGameClock = {
@@ -25,7 +33,7 @@ export const pokerGameClock = {
 export const pokerThickClient = {
   name: 'Poker Thick client',
   description:
-    'This is an Offline First desktop application. It allows tournament directors to add new player and record tournament results. It also houses an online only area for administration of every aspect of the Poker League',
+    'This is an Offline First desktop application. It allows tournament directors to add new player and record tournament results. It also houses an online only area for administration.',
   technologies: [technologies.java, technologies.sqlite],
 };
 
@@ -64,12 +72,17 @@ export const portfolio = {
 export const projects: ProjectGroup[] = [
   {
     title: 'Current Projects',
-    projects: [babyDaily, portfolio],
+    projects: [babyDailyFront, babyDailyBack],
   },
 
   {
     title: 'Poker League Management',
     projects: [pokerGameClock, pokerThickClient, pokerSPA, pokerAPI],
+  },
+
+  {
+    title: 'Other Projects',
+    projects: [portfolio],
   },
 
   // {
