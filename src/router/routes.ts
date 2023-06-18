@@ -16,6 +16,12 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/PokerGameClockPage.vue'),
         name: 'poker-game-clock',
       },
+
+      {
+        path: 'poker-thick-client',
+        component: () => import('pages/PokerClientPage.vue'),
+        name: 'poker-thick-client',
+      },
     ],
   },
 

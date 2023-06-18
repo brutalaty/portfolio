@@ -21,7 +21,7 @@ export const babyDailyBack: Project = {
   repository: 'https://github.com/brutalaty/baby-daily-back',
 };
 
-export const pokerGameClock = {
+export const pokerGameClock: Project = {
   name: 'Poker Game Clock',
   description:
     'This application lets the players see the blind and chip values. It also allows the Tournament Director to manipulate the timer. This is for offline use and is bundled into the Poker Thick Client application.',
@@ -30,14 +30,15 @@ export const pokerGameClock = {
   repository: 'https://github.com/brutalaty/poker-game-clock',
 };
 
-export const pokerThickClient = {
+export const pokerThickClient: Project = {
   name: 'Poker Thick client',
   description:
     'This is an Offline First desktop application. It allows tournament directors to add new player and record tournament results. It also houses an online only area for administration.',
   technologies: [technologies.java, technologies.sqlite],
+  route_name: 'poker-thick-client',
 };
 
-export const pokerSPA = {
+export const pokerSPA: Project = {
   name: 'Poker SPA',
   description:
     'The public facing SPA Website that is designed for the players to be able to view tournament results, leaderboards, weekly tournament schedules, upcoming major events and some player statistics',
@@ -45,7 +46,7 @@ export const pokerSPA = {
   external_url: 'https://eastcoastpoker.com.au',
 };
 
-export const pokerAPI = {
+export const pokerAPI: Project = {
   name: 'Poker API',
   description:
     'A Codeigniter API that serves both the front end Vue2 website and the Offline First Java thick client.',
@@ -56,7 +57,7 @@ export const pokerAPI = {
   ],
 };
 
-export const portfolio = {
+export const portfolio: Project = {
   name: 'This Portfolio',
   description:
     'This portfolio was over engineered to allow me to continue playing with TypeScript and Vitest',
