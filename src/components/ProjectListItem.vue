@@ -36,14 +36,12 @@ defineProps({
 
 .project-item
   background: darken($light-page, 2%)
-
-.project-item
   width: 30rem
   min-width: min(30rem, 100vw)
   display: flex
   flex-direction: column
   border-radius: 5px
-  padding: 1rem
+  padding: 2rem
   margin: 1rem
   justify-content: between
   gap: .5rem
