@@ -10,51 +10,50 @@ import { pokerThickClient as project } from 'src/data/projects';
 
     <div class="flex flex-center">
       <ProjectPageCard>
-        <template v-slot:heading> Loading Screen </template>
+        <template #heading> Loading Screen </template>
 
-        <template v-slot:description>
+        <template #description>
           here is some description of the loading flash screen
         </template>
 
-        <template v-slot:image>
+        <template #image>
           <img
-            class="project-page-card__image"
             sizes="(max-width: 531px) 100vw, 531px"
             srcset="
-              images/poker-thick-client/load-screen/load-splash-screen_oez6ie_c_scale,w_200.png 200w,
-              images/poker-thick-client/load-screen/load-splash-screen_oez6ie_c_scale,w_399.png 399w,
-              images/poker-thick-client/load-screen/load-splash-screen_oez6ie_c_scale,w_531.png 531w
+              images/poker-thick-client/load-screen/load-splash-screen_nfi2fm_c_scale,w_308.png 308w,
+              images/poker-thick-client/load-screen/load-splash-screen_nfi2fm_c_scale,w_449.png 449w,
+              images/poker-thick-client/load-screen/load-splash-screen_nfi2fm_c_scale,w_531.png 531w
             "
-            src="images/poker-thick-client/load-screen/load-splash-screen_oez6ie_c_scale,w_531.png"
+            src="images/poker-thick-client/load-screen/load-splash-screen_nfi2fm_c_scale,w_531.png"
             alt=""
           />
         </template>
       </ProjectPageCard>
 
       <ProjectPageCard>
-        <template v-slot:heading>Main Menu</template>
-        <template v-slot:description
+        <template #heading>Main Menu</template>
+        <template #description
           >here is some description of the Main Menu</template
         >
-        <template v-slot:image>
+        <template #image>
           <img
             sizes="(max-width: 738px) 100vw, 738px"
             srcset="
-              images/poker-thick-client/main-menu/main-screen_ylbcb1_c_scale,w_300.png 300w,
-              images/poker-thick-client/main-menu/main-screen_ylbcb1_c_scale,w_738.png 738w
+              images/poker-thick-client/main-menu/main-menu_308.png 308w,
+              images/poker-thick-client/main-menu/main-menu_738.png 738w
             "
-            src="images/poker-thick-client/main-menu/main-screen_ylbcb1_c_scale,w_738.png"
+            src="images/poker-thick-client/main-menu/main-menu_738.png"
             alt=""
           />
         </template>
       </ProjectPageCard>
 
       <ProjectPageCard>
-        <template v-slot:heading>Synchronisation</template>
-        <template v-slot:description
+        <template #heading>Synchronisation</template>
+        <template #description
           >here is some description of the Synchronisation screen</template
         >
-        <template v-slot:image>
+        <template #image>
           <img
             class="project-page-card__image"
             sizes="(max-width: 751px) 100vw, 751px"
