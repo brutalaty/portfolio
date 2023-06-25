@@ -88,7 +88,7 @@ h3
   overflow: hidden
   align-items: center
 
-  &__image
+  & img
     width: 100%
     border-radius: $card-border-radius
     box-shadow: 0 0 15px black
@@ -111,7 +111,7 @@ h3
     &:nth-child(even)
       flex-direction: row-reverse
 
-    &__image
+    & img
       width: math.percentage($image-max-width-percent / 100)
     &__body
       width: math.percentage((100 - $image-max-width-percent) / 100)
