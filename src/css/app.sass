@@ -1,3 +1,5 @@
+@use "sass:math"
+
 // app global css in Sass form
 .body
   &--light
@@ -41,33 +43,65 @@ h3
     width: 20px
 
 //cards
+.project-item-card
+  background: darken($light-page, 2%)
+  width: 30rem
+  min-width: min(30rem, 100vw)
+  display: flex
+  flex-direction: column
+  border-radius: $card-border-radius
+  padding: 2rem
+  margin: 1rem
+  justify-content: between
+  gap: .5rem
 
-$card-border-radius: .8rem
+  &__heading
+    font-weight: 300
+    text-align: center
+    margin: 1.5rem 0 .5rem 0
+
+  &__technologies
+    display: flex
+    justify-content: center
+
+  &__description
+    line-height: 2
+    margin: 3rem 1.5rem
+    flex-grow: 2
+
+  &__navigation
+    justify-content: space-between
+    & .button
+      min-width: 10rem
+    & .button-more, .button-website
+      flex-order: 4
 
 .project-page-card
+  $image-max-width-percent: 51
   display: flex
   flex-direction: column
   width: 100%
-  max-width: 612px
+  max-width: $max-width * ($image-max-width-percent / 100)
   background: darken($light-page, 5%)
   border-radius: $card-border-radius
   margin: 2rem 0
   overflow: hidden
   align-items: center
 
-  &-image
+  &__image
     width: 100%
     border-radius: $card-border-radius
+    box-shadow: 0 0 15px black
 
-  &-body
+  &__body
     padding: 2rem 1rem
 
-  &-heading
+  &__heading
     margin: 0
     padding: 0rem
     text-align: center
 
-  &-description
+  &__description
     line-height: 2
     padding: 1rem
 
@@ -77,8 +111,8 @@ $card-border-radius: .8rem
     &:nth-child(even)
       flex-direction: row-reverse
 
-    &-image
-      width: 51%
-    &-body
-      width: 49%
+    &__image
+      width: math.percentage($image-max-width-percent / 100)
+    &__body
+      width: math.percentage((100 - $image-max-width-percent) / 100)
       text-align: center
