@@ -34,7 +34,7 @@ export const pokerThickClient: Project = {
   name: 'Poker Thick Client',
   description:
     'This is an Offline First desktop application. It allows tournament directors to add new player and record tournament results. It also houses an online only area for administration.',
-  technologies: [technologies.java, technologies.sqlite],
+  technologies: [technologies.java, technologies.hsqldb],
   route_name: 'poker-thick-client',
 };
 

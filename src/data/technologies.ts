@@ -14,7 +14,8 @@ export type TechnologiesDeclared =
   | 'scss'
   | 'sass'
   | 'sqlite'
-  | 'mysql';
+  | 'mysql'
+  | 'hsqldb';
 
 type Technologies = Record<TechnologiesDeclared, Technology>;
 
@@ -42,6 +43,7 @@ export const technologies: Technologies = {
   sass: { name: 'Sass', color: '#bf4080' },
   sqlite: { name: 'SQLite', color: '#7cbeec' },
   mysql: { name: 'MySQL', color: '#3E6E93' },
+  hsqldb: { name: 'HSQLDB', color: '#549dcf' },
 };
 
 export default technologies;
