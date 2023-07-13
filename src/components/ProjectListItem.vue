@@ -9,7 +9,7 @@
       class="project-item-card__technologies"
     />
 
-    <div class="project-item-card__description">
+    <div class="project-item-card__description" data-test="project-description">
       {{ project.description }}
     </div>
 

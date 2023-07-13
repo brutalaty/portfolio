@@ -40,7 +40,7 @@ describe('group', () => {
 
   it('renders the projects description', () => {
     expect(project?.description).toBeTruthy();
-    expect(wrapper.get('.project-description').text()).toContain(
+    expect(wrapper.get('[data-test="project-description"]').text()).toContain(
       project.description
     );
   });
