@@ -120,7 +120,7 @@ import { pokerThickClient as project } from 'src/data/projects';
         <template #description>
           <p>
             To create a new or edit an <dfn>offline result</dfn>, a result yet
-            to be syncrhonised to the server, you select
+            to be synchronised to the server, you select
             <em>Official Game</em> at the <em>Main Menu</em>.
           </p>
           <p>
@@ -141,9 +141,9 @@ import { pokerThickClient as project } from 'src/data/projects';
       <ProjectPageCard>
         <template #description>
           <p>
-            A <dfn>Weekly Game</dfn> runs once a week, every week, on specificed
+            A <dfn>Weekly Game</dfn> runs once a week, every week, on the specified
             day of the week. When creating a weekly games result, the calendar
-            is locked to it's day of the week.
+            is locks the other 6 days and so, they cannot be selected.
           </p>
           <p>
             <dfn>Events</dfn> are larger games that have a larger prize pool and
@@ -178,12 +178,12 @@ import { pokerThickClient as project } from 'src/data/projects';
             >
           </p>
           <p>
-            Register players by finding them in the list or by scanning their
+            You register players by finding them in the list, type-hinting in the searchbox or by scanning their
             member card.
           </p>
           <p>
             Players who enter the tournament are awarded participation points,
-            those who place higher gain more poins. The point structures are
+            those who place higher gain more points. The point structures are
             setup by the administrators in the administration area. Tournaments
             that are known to attract a larger player pool can be adjusted to
             award more points, seeing that it is much more difficult to place in
