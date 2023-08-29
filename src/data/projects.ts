@@ -1,9 +1,21 @@
 import { ProjectGroup, Project } from 'src/types/project';
 import { technologies } from './technologies';
 
+export const PTPerfect: Project = {
+  name: 'PTPerfect',
+  description: 'A website for personal trainers to review clients mobility and provide them with tailored workout routines.',
+  technologies: [
+    technologies.vue2,
+    technologies.sass, 
+    technologies.laravel,
+    technologies.phpunit,
+  ],
+  route_name: 'ptperfect'
+}
+
 export const babyDailyFront: Project = {
   name: 'Baby Daily SPA',
-  description: 'Baby Daily App to record poops, feeds, medicine intake',
+  description: 'A pet project to record and organise a babies feeds, poops and medicine intake.',
   technologies: [
     technologies.vue3,
     technologies.sass,
@@ -16,7 +28,8 @@ export const babyDailyFront: Project = {
 
 export const babyDailyBack: Project = {
   name: 'Baby Daily API',
-  description: 'Baby Daily App to record poops, feeds, medicine intake',
+  description: 'A pet project to record and organise a babies stdin, stdout and stderr.',
+  
   technologies: [technologies.laravel, technologies.phpunit],
   repository: 'https://github.com/brutalaty/baby-daily-back',
 };
@@ -73,7 +86,7 @@ export const portfolio: Project = {
 export const projects: ProjectGroup[] = [
   {
     title: 'Current Projects',
-    projects: [babyDailyFront, babyDailyBack],
+    projects: [PTPerfect, babyDailyFront, babyDailyBack],
   },
 
   {

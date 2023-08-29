@@ -12,6 +12,12 @@ const routes: RouteRecordRaw[] = [
       },
 
       {
+        path: 'ptperfect',
+        component: () => import('pages/PTPerfectPage.vue'),
+        name: 'ptperfect',
+      },
+
+      {
         path: 'poker-game-clock',
         component: () => import('pages/PokerGameClockPage.vue'),
         name: 'poker-game-clock',
