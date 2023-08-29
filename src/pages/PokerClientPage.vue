@@ -12,9 +12,15 @@ import { pokerThickClient as project } from 'src/data/projects';
       <ProjectPageCard>
         <template #description>
           <p>
-            During this applications development, I was studying SOLID
-            principles and Design Patterns. I enjoyed implementing in practice
-            what I had been learning.
+            Seeing as I built this client with Java, it can run on Linux,
+            Windows or MacOS.
+          </p>
+          <p>
+            Despite what people think this applications purpose is at first
+            glance, it is not a game nor is it an online gambling platform. It's
+            main function is to record results of the tournaments ran by Poker
+            Leagues, allowing leaderboards and the players to view their own
+            performance statistics.
           </p>
         </template>
 
@@ -35,18 +41,17 @@ import { pokerThickClient as project } from 'src/data/projects';
 
       <ProjectPageCard>
         <template #description>
+          <p>Here we see my basic vector skills being pushed to their limit.</p>
+
           <p>
-            This Java desktop app was built without any framework or ui library.
-            It uses
-            <a href="https://miglayout.com/" target="_blank">MigLayout</a> and
-            plain swing/awt.
+            Most venues they run the tournaments at have very poor internet
+            connection or worse, none at all. To keep their offline data as up
+            to date as possible, tournament directors should sync before and
+            after running a tournament.
           </p>
 
           <p>
-            Almost all of this applications components have had their
-            depenencies inverted. Main.java is the only dirty class, as it
-            creates and injects all of the dependencies into the factories,
-            gateways, etc.
+            I think the importance of Synchronisation was adequately conveyed.
           </p>
         </template>
         <template #figure="{ sizes }">
@@ -72,6 +77,7 @@ import { pokerThickClient as project } from 'src/data/projects';
             data will be wiped and asks for confirmation.
           </p>
           <p>
+            <i class="fa-solid fa-circle-info q-mr-md"></i>
             The Poker Management API houses a
             <strong>Database Per Client</strong> Architecture.
           </p>
@@ -88,12 +94,27 @@ import { pokerThickClient as project } from 'src/data/projects';
       <ProjectPageCard>
         <template #description>
           <p>
+            The client app will download all changes since the last
+            synchronisation. If the client is below the servers minimum stored
+            version(not displayed), they will be forced to wipe local data and
+            download each table iteratively rather then by change history.
+          </p>
+
+          <p>
+            If there are any conflicts with the unsynchronised data on the
+            client and the data coming from the server, the user is asked how to
+            handle the conflict.
+          </p>
+
+          <p>
+            <i class="fa-solid fa-circle-info q-mr-md"></i>
             The server database has a table named
             <code>change_log</code>
             that contains all of the changes made within the last few weeks,
             these changes are gathered via MySQL Triggers.
           </p>
           <p class="q-my-lg">
+            <i class="fa-solid fa-circle-info q-mr-md"></i>
             Using the <strong>Strategy</strong> and
             <strong>State</strong> design patterns, the Synchronisation process
             runs through an async loop. During the download strategy, the sync
@@ -141,9 +162,9 @@ import { pokerThickClient as project } from 'src/data/projects';
       <ProjectPageCard>
         <template #description>
           <p>
-            A <dfn>Weekly Game</dfn> runs once a week, every week, on the specified
-            day of the week. When creating a weekly games result, the calendar
-            is locks the other 6 days and so, they cannot be selected.
+            A <dfn>Weekly Game</dfn> runs once a week, every week, on the
+            specified day of the week. When creating a weekly games result, the
+            calendar is locks the other 6 days and so, they cannot be selected.
           </p>
           <p>
             <dfn>Events</dfn> are larger games that have a larger prize pool and
@@ -172,22 +193,14 @@ import { pokerThickClient as project } from 'src/data/projects';
             finishing placements and open the game clock. You can see the
             placements list in the
             <a href="#create-results-4">next panel</a> and you can see a preview
-            of the
+            of the Game Clock on the
             <router-link to="poker-game-clock"
-              ><strong>Game Clock</strong> here.</router-link
+              ><strong>Game Clock</strong> Page.</router-link
             >
           </p>
           <p>
-            You register players by finding them in the list, type-hinting in the searchbox or by scanning their
-            member card.
-          </p>
-          <p>
-            Players who enter the tournament are awarded participation points,
-            those who place higher gain more points. The point structures are
-            setup by the administrators in the administration area. Tournaments
-            that are known to attract a larger player pool can be adjusted to
-            award more points, seeing that it is much more difficult to place in
-            them.
+            You register players by finding them in the list, type-hinting in
+            the searchbox or by scanning their member card.
           </p>
         </template>
         <template #figure="{ sizes }">
@@ -207,17 +220,27 @@ import { pokerThickClient as project } from 'src/data/projects';
       <ProjectPageCard id="create-results-4">
         <template #description>
           <p>
-            All of the local and server database functions are accessed through
-            their own gateways, <code>LocalGateway</code> and
-            <code>ServerGateway</code>.
+            Players who enter the tournament are awarded participation points,
+            those who place higher gain more points. The point structures are
+            setup by the administrators in the administration area. Tournaments
+            that are known to attract a larger player pool can be adjusted to
+            award more points, seeing that it is much more difficult to place in
+            them.
           </p>
           <p>
-            These <em>Result Creation</em> screens were needed for multiple
-            usecases. They had to be able to save to the local database when
-            offline and directly to the server when in the admin area.
+            <i class="fa-solid fa-circle-info q-mr-md"></i> All of the local and
+            server database functions are accessed through their own gateways,
+            <code>LocalGateway</code> and <code>ServerGateway</code>.
           </p>
           <p>
-            The necessary functions of <code>LocalGateway</code> and
+            <i class="fa-solid fa-circle-info q-mr-md"></i> These
+            <em>Result Creation</em> screens were needed for multiple usecases.
+            They had to be able to save to the local database when offline and
+            directly to the server when in the admin area.
+          </p>
+          <p>
+            <i class="fa-solid fa-circle-info q-mr-md"></i> The necessary
+            functions of <code>LocalGateway</code> and
             <code>ServerGateway</code>
             are injected into these controllers via the
             <strong>adapter </strong>
@@ -241,15 +264,20 @@ import { pokerThickClient as project } from 'src/data/projects';
 
       <ProjectPageCard>
         <template #description>
-          <p>
-            There are three roles for staff,
-            <strong>Tournament Directors</strong> have base permissions
-            <br />
-            owner can do everything
-            <br />
-            technician can do everything with the exception of promoting users
-            or editing the own or other technicians details.
-          </p>
+          <p>There are three roles for staff:</p>
+
+          <ul>
+            <li><strong>Owner </strong> has all permissions</li>
+            <li>
+              <strong>Technician</strong> has all permissions but cannot edit
+              the Owner
+            </li>
+            <li>
+              <strong>Tournament Director</strong> can only make changes to
+              players and results
+            </li>
+          </ul>
+          <p></p>
         </template>
         <template #figure="{ sizes }">
           <figcaption>Administration</figcaption>
@@ -267,7 +295,8 @@ import { pokerThickClient as project } from 'src/data/projects';
 
       <ProjectPageCard>
         <template #description>
-          Handy information for each model and CRUD operations
+          Each section in the administration area have a data table with
+          relevant information and buttons for CRUD operations.
         </template>
 
         <template #figure>
@@ -280,7 +309,18 @@ import { pokerThickClient as project } from 'src/data/projects';
       </ProjectPageCard>
 
       <ProjectPageCard>
-        <template #description> validation pipelines on modal forms </template>
+        <template #description
+          ><p>
+            All forms have validation that change the color of the input and the
+            related label.
+          </p>
+          <p>
+            If you actually read through all of this, well done! I think you
+            deserve something for the effort. Here is a free link to take you
+            back the the
+            <router-link to="index"><strong>Index</strong> Page!</router-link>
+          </p>
+        </template>
 
         <template #figure>
           <figcaption>Administration Form</figcaption>
