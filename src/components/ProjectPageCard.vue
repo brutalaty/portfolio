@@ -79,7 +79,7 @@ $card-background: darken($light-page, 5%)
   @media(min-width: $breakpoint-md-min)
     max-width: 100%
     flex-direction: row
-    &:nth-child(even)
+    &:nth-child(even of .project-page-card)
       flex-direction: row-reverse
 
     & img
