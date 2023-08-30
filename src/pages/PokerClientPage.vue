@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import ProjectPageHeadingSection from 'src/components/ProjectPageHeadingSection.vue';
 import ProjectPageCard from 'src/components/ProjectPageCard.vue';
+import InfoCard from 'src/components/InfoCard.vue';
+
 import { pokerThickClient as project } from 'src/data/projects';
 </script>
 
@@ -11,10 +13,6 @@ import { pokerThickClient as project } from 'src/data/projects';
     <div class="flex flex-center">
       <ProjectPageCard>
         <template #description>
-          <p>
-            Seeing as I built this client with Java, it can run on Linux,
-            Windows or MacOS.
-          </p>
           <p>
             Despite what people think this applications purpose is at first
             glance, it is not a game nor is it an online gambling platform. It's
@@ -39,6 +37,10 @@ import { pokerThickClient as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
+      <InfoCard>
+        Built with Java, this desktop app can run on Linux, Windows or MacOS.
+      </InfoCard>
+
       <ProjectPageCard>
         <template #description>
           <p>Here we see my basic vector skills being pushed to their limit.</p>
@@ -48,10 +50,6 @@ import { pokerThickClient as project } from 'src/data/projects';
             connection or worse, none at all. To keep their offline data as up
             to date as possible, tournament directors should sync before and
             after running a tournament.
-          </p>
-
-          <p>
-            I think the importance of Synchronisation was adequately conveyed.
           </p>
         </template>
         <template #figure="{ sizes }">
@@ -68,6 +66,11 @@ import { pokerThickClient as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
+      <InfoCard>
+        The Poker Management API houses a
+        <strong>Database Per Client</strong> Architecture.
+      </InfoCard>
+
       <ProjectPageCard>
         <template #description>
           <p class="q-mb-xl">
@@ -75,11 +78,6 @@ import { pokerThickClient as project } from 'src/data/projects';
             name and even change the url that the client connects to. Changing
             anything other then the User Name alerts the user that all or some
             data will be wiped and asks for confirmation.
-          </p>
-          <p>
-            <i class="fa-solid fa-circle-info q-mr-md"></i>
-            The Poker Management API houses a
-            <strong>Database Per Client</strong> Architecture.
           </p>
         </template>
         <template #figure>
@@ -91,36 +89,27 @@ import { pokerThickClient as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
+      <InfoCard>
+        The server database has a table named
+        <code>change_log</code>
+        that contains all of the changes made within the last few weeks, these
+        changes are gathered via MySQL Triggers.
+      </InfoCard>
+
       <ProjectPageCard>
         <template #description>
           <p>
             The client app will download all changes since the last
             synchronisation. If the client is below the servers minimum stored
             version(not displayed), they will be forced to wipe local data and
-            download each table iteratively rather then by change history.
+            download each model iteratively rather then by the
+            <code>change_log</code>.
           </p>
 
           <p>
             If there are any conflicts with the unsynchronised data on the
             client and the data coming from the server, the user is asked how to
             handle the conflict.
-          </p>
-
-          <p>
-            <i class="fa-solid fa-circle-info q-mr-md"></i>
-            The server database has a table named
-            <code>change_log</code>
-            that contains all of the changes made within the last few weeks,
-            these changes are gathered via MySQL Triggers.
-          </p>
-          <p class="q-my-lg">
-            <i class="fa-solid fa-circle-info q-mr-md"></i>
-            Using the <strong>Strategy</strong> and
-            <strong>State</strong> design patterns, the Synchronisation process
-            runs through an async loop. During the download strategy, the sync
-            process accesses the <code>change_log</code> to update the local
-            database. When download completes, it moves onto the upload strategy
-            to push the new offline data to the server.
           </p>
         </template>
         <template #figure="{ sizes }">
@@ -136,6 +125,14 @@ import { pokerThickClient as project } from 'src/data/projects';
           />
         </template>
       </ProjectPageCard>
+
+      <InfoCard>
+        Using the <strong>Strategy</strong> and <strong>State</strong> design
+        patterns, the Synchronisation process runs through an async loop. One
+        strategy for example, is the Download Strategy, which will request
+        updates in batches and apply them to the local database until it is
+        either up to date or runs into a conflict.
+      </InfoCard>
 
       <ProjectPageCard>
         <template #description>
@@ -159,6 +156,12 @@ import { pokerThickClient as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
+      <InfoCard>
+        All of the local and server database functions are accessed through
+        their own gateways,
+        <code>LocalGateway</code> and <code>ServerGateway</code>.
+      </InfoCard>
+
       <ProjectPageCard>
         <template #description>
           <p>
@@ -181,6 +184,12 @@ import { pokerThickClient as project } from 'src/data/projects';
           />
         </template>
       </ProjectPageCard>
+      <InfoCard>
+        These
+        <em>Result Creation</em> screens were needed for multiple usecases. They
+        had to be able to save to the local database when offline and directly
+        to the server when in the admin area.
+      </InfoCard>
 
       <ProjectPageCard>
         <template #description>
@@ -217,6 +226,15 @@ import { pokerThickClient as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
+      <InfoCard>
+        The necessary functions of <code>LocalGateway</code> and
+        <code>ServerGateway</code>
+        are injected into these controllers via the
+        <strong>adapter </strong>
+        <code> TournamentGateway</code>. removing the need to create and manage
+        multiple of each controller.
+      </InfoCard>
+
       <ProjectPageCard id="create-results-4">
         <template #description>
           <p>
@@ -226,26 +244,6 @@ import { pokerThickClient as project } from 'src/data/projects';
             that are known to attract a larger player pool can be adjusted to
             award more points, seeing that it is much more difficult to place in
             them.
-          </p>
-          <p>
-            <i class="fa-solid fa-circle-info q-mr-md"></i> All of the local and
-            server database functions are accessed through their own gateways,
-            <code>LocalGateway</code> and <code>ServerGateway</code>.
-          </p>
-          <p>
-            <i class="fa-solid fa-circle-info q-mr-md"></i> These
-            <em>Result Creation</em> screens were needed for multiple usecases.
-            They had to be able to save to the local database when offline and
-            directly to the server when in the admin area.
-          </p>
-          <p>
-            <i class="fa-solid fa-circle-info q-mr-md"></i> The necessary
-            functions of <code>LocalGateway</code> and
-            <code>ServerGateway</code>
-            are injected into these controllers via the
-            <strong>adapter </strong>
-            <code> TournamentGateway</code>. removing the need to create and
-            manage multiple of each controller.
           </p>
         </template>
         <template #figure="{ sizes }">
