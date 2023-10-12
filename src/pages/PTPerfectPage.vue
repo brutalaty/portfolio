@@ -12,12 +12,12 @@ import { PTPerfect as project } from 'src/data/projects';
     <div class="flex flex-center">
       <!-- Login -->
       <ProjectPageCard>
+        <template #heading> git init </template>
         <template #description>
-          <p>Words</p>
+          <p>This project was started sometime early 2020.</p>
         </template>
 
         <template #figure="{ sizes }">
-          <figcaption>Login</figcaption>
           <img
             :sizes="sizes"
             srcset="
@@ -30,7 +30,7 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
+      <!-- <InfoCard> More Words </InfoCard> -->
 
       <!-- Dashboard -->
       <ProjectPageCard>
@@ -39,7 +39,6 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
 
         <template #figure="{ sizes }">
-          <figcaption>Trainer Dash</figcaption>
           <img
             :sizes="sizes"
             srcset="
@@ -61,7 +60,6 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
 
         <template #figure="{ sizes }">
-          <figcaption>Client Invite</figcaption>
           <img
             :sizes="sizes"
             srcset="
@@ -480,7 +478,21 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
+      <!-- Tests -->
+      <ProjectPageCard>
+        <template #description>
+          <p>Words</p>
+        </template>
+
+        <template #figure="{ sizes }">
+          <figcaption>Backend Tests</figcaption>
+          <img
+            :sizes="sizes"
+            src="images/ptperfect/21-tests_lyug0p.png"
+            alt=""
+          />
+        </template>
+      </ProjectPageCard>
     </div>
   </q-page>
 </template>
