@@ -4,7 +4,6 @@ import ProjectPageCard from 'src/components/ProjectPageCard.vue';
 import InfoCard from 'src/components/InfoCard.vue';
 
 import { pokerThickClient as project } from 'src/data/projects';
-import { route } from 'quasar/wrappers';
 </script>
 
 <template>
