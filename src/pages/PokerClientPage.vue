@@ -315,8 +315,9 @@ import { pokerThickClient as project } from 'src/data/projects';
           <p>
             If you actually read through all of this, well done! I think you
             deserve something for the effort. Here is a free link to take you
-            back the the
-            <router-link to="index"><strong>Index</strong> Page!</router-link>
+            back the the<q-btn to="index" flat dense class="" color="primary"
+              >Index Page</q-btn
+            >
           </p>
         </template>
 
