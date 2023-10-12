@@ -23,7 +23,7 @@ picture
           application. The desktop application dynamically sets the data files
           contents before launching the game clock.
         </template>
-        <template #image="{ sizes }">
+        <template #figure="{ sizes }">
           <img
             :sizes="sizes"
             srcset="
@@ -45,7 +45,7 @@ picture
           alarm and allows the tournament director to cycle through the current
           blindset and set which chips displayed.
         </template>
-        <template #image="{ sizes }">
+        <template #figure="{ sizes }">
           <img
             :sizes="sizes"
             srcset="
@@ -66,7 +66,7 @@ picture
           remaining, the timer is component is removed and the last blind set is
           fixed.
         </template>
-        <template #image="{ sizes }">
+        <template #figure="{ sizes }">
           <img
             :sizes="sizes"
             srcset="
