@@ -2,6 +2,8 @@
 //below 1024 window, image is 100w
 // at >= 1024 window width. image is 51w
 //1024px * .51 w
+import { useSlots } from 'vue';
+const slots = useSlots();
 </script>
 
 <template>
@@ -11,14 +13,14 @@
         <figcaption>
           Project Page Card requires an <img /> in the image slot
         </figcaption>
-        <img alt="Project Page Card requires an <img> in the image slot" />
+        <img alt="Project Page Card requires an <img> in the figure slot" />
       </slot>
     </figure>
 
     <div class="project-page-card__body">
-      <h6 class="project-page-card__heading">
+      <h2 v-if="slots.heading" class="project-page-card__heading text-h6">
         <slot name="heading"></slot>
-      </h6>
+      </h2>
 
       <div class="project-page-card__description">
         <slot name="description"></slot>
