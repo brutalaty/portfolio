@@ -87,11 +87,10 @@ import { PTPerfect as project } from 'src/data/projects';
           <img
             :sizes="sizes"
             srcset="
-              images/ptperfect/04-email-invitation_g4azcw_c_scale,w_350.png 350w,
-              images/ptperfect/04-email-invitation_g4azcw_c_scale,w_956.png 956w
+              images/ptperfect/04-email_moarkr_c_scale,w_350.png 350w,
+              images/ptperfect/04-email_moarkr_c_scale,w_750.png 750w
             "
-            src="images/ptperfect/04-email-invitation_g4azcw_c_scale,w_956.png"
-            alt=""
+            src="images/ptperfect/04-email_moarkr_c_scale,w_750.png"
           />
         </template>
       </ProjectPageCard>
