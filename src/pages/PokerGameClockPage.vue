@@ -62,9 +62,9 @@ picture
       <ProjectPageCard>
         <template #heading>A very long tournament</template>
         <template #description>
-          If the tournament runs so long there are no longer any blinds
-          remaining, the timer is component is removed and the last blind set is
-          fixed.
+          If the tournament runs so long that there are no longer any blinds
+          remaining, the timer component is removed and the last blind set is
+          used indefinitely.
         </template>
         <template #figure="{ sizes }">
           <img
