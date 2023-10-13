@@ -30,13 +30,11 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <!-- <InfoCard> More Words </InfoCard> -->
+      <!--  -->
 
       <!-- Dashboard -->
       <ProjectPageCard>
-        <template #description>
-          <p>Basic</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <img
@@ -51,13 +49,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Invite -->
       <ProjectPageCard>
-        <template #description>
-          <p>Basic</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <img
@@ -72,13 +66,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Email -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Invitation Email</figcaption>
@@ -93,13 +83,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Movements -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Movement Patterns</figcaption>
@@ -115,13 +101,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Equipment Index -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Equipment</figcaption>
@@ -137,13 +119,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Equipment Show -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Equipment Show</figcaption>
@@ -159,13 +137,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Equipment Edit -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Equipment Edit</figcaption>
@@ -183,9 +157,7 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Videos -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Videos</figcaption>
@@ -204,13 +176,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Videos Show -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Videos Show</figcaption>
@@ -229,13 +197,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Videos Edit -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Videos Edit</figcaption>
@@ -251,13 +215,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Blueptints -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Blueprints</figcaption>
@@ -273,13 +233,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Blueprints Show -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Blueprints Show</figcaption>
@@ -297,13 +253,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Regimen Edit -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Regimen Edit</figcaption>
@@ -319,13 +271,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Blueprints Clone Show -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Blueprints Clone Selection</figcaption>
@@ -341,13 +289,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Blueprints Clone Show Dialog -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Clone Selection Dialog</figcaption>
@@ -364,13 +308,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Blueprints Clone Show Dialog -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Clone Selection Dialog</figcaption>
@@ -386,14 +326,10 @@ import { PTPerfect as project } from 'src/data/projects';
           />
         </template>
       </ProjectPageCard>
-
-      <InfoCard> More Words </InfoCard>
 
       <!-- Blueprints Clone Edit -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Clone Edit</figcaption>
@@ -409,13 +345,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Regimens Show Edit Dialog -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Edit Routine Dialog</figcaption>
@@ -431,13 +363,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- Routine Edit -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Routine Edit</figcaption>
@@ -454,13 +382,9 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <InfoCard> More Words </InfoCard>
-
       <!-- DB Relations -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Simplified DB Relations</figcaption>
@@ -480,9 +404,7 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Tests -->
       <ProjectPageCard>
-        <template #description>
-          <p>Words</p>
-        </template>
+        <template #description> </template>
 
         <template #figure="{ sizes }">
           <figcaption>Backend Tests</figcaption>
