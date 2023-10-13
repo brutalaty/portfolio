@@ -3,19 +3,21 @@ import { technologies } from './technologies';
 
 export const PTPerfect: Project = {
   name: 'PTPerfect',
-  description: 'A website for personal trainers to review clients mobility and provide them with tailored workout routines.',
+  description:
+    'A website for personal trainers to review clients mobility and provide them with tailored workout routines.',
   technologies: [
     technologies.vue2,
-    technologies.sass, 
+    technologies.sass,
     technologies.laravel,
     technologies.phpunit,
   ],
-  route_name: 'ptperfect'
-}
+  route_name: 'ptperfect',
+};
 
 export const babyDailyFront: Project = {
   name: 'Baby Daily SPA',
-  description: 'A pet project to record and organise a babies feeds, poops and medicine intake.',
+  description:
+    'A pet project to record and organise a babies feeds, poops and medicine intake.',
   technologies: [
     technologies.vue3,
     technologies.sass,
@@ -28,8 +30,9 @@ export const babyDailyFront: Project = {
 
 export const babyDailyBack: Project = {
   name: 'Baby Daily API',
-  description: 'A pet project to record and organise a babies stdin, stdout and stderr.',
-  
+  description:
+    'A pet project to record and organise a babies stdin, stdout and stderr.',
+
   technologies: [technologies.laravel, technologies.phpunit],
   repository: 'https://github.com/brutalaty/baby-daily-back',
 };
@@ -86,7 +89,7 @@ export const portfolio: Project = {
 export const projects: ProjectGroup[] = [
   {
     title: 'Current Projects',
-    projects: [PTPerfect, babyDailyFront, babyDailyBack],
+    projects: [PTPerfect],
   },
 
   {
@@ -96,7 +99,7 @@ export const projects: ProjectGroup[] = [
 
   {
     title: 'Other Projects',
-    projects: [portfolio],
+    projects: [babyDailyFront, babyDailyBack, portfolio],
   },
 
   // {
