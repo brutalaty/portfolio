@@ -13,11 +13,25 @@ defineProps({
 </script>
 
 <template>
-  <header>
-    <h1>{{ project.name }}</h1>
-    <TechnologyList :technologies="project.technologies" />
-    <ProjectPageNavigation :project="project" />
+  <header class="project-page_header">
+    <h1 class="project-page_heading">{{ project.name }}</h1>
+    <TechnologyList
+      class="project-page_tech"
+      :technologies="project.technologies"
+    />
+    <ProjectPageNavigation class="project-page_nav" :project="project" />
   </header>
 </template>
 
-<style lang="sass"></style>
+<style lang="sass">
+.project-page
+  &_header
+    display: flex
+    flex-direction: column
+    align-items: center
+  &_heading
+    margin-bottom: 0
+  &_tech
+    margin-bottom: 1rem
+  &_nav
+</style>
