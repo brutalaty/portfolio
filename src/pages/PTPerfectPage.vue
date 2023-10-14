@@ -88,7 +88,6 @@ import { PTPerfect as project } from 'src/data/projects';
         <template #description> </template>
 
         <template #figure="{ sizes }">
-          <figcaption>Movement Patterns</figcaption>
           <img
             :sizes="sizes"
             srcset="
@@ -106,7 +105,6 @@ import { PTPerfect as project } from 'src/data/projects';
         <template #description> </template>
 
         <template #figure="{ sizes }">
-          <figcaption>Equipment</figcaption>
           <img
             :sizes="sizes"
             srcset="
@@ -142,7 +140,6 @@ import { PTPerfect as project } from 'src/data/projects';
         <template #description> </template>
 
         <template #figure="{ sizes }">
-          <figcaption>Equipment Edit</figcaption>
           <img
             :sizes="sizes"
             srcset="
@@ -202,7 +199,6 @@ import { PTPerfect as project } from 'src/data/projects';
         <template #description> </template>
 
         <template #figure="{ sizes }">
-          <figcaption>Videos Edit</figcaption>
           <img
             :sizes="sizes"
             srcset="
@@ -220,7 +216,6 @@ import { PTPerfect as project } from 'src/data/projects';
         <template #description> </template>
 
         <template #figure="{ sizes }">
-          <figcaption>Blueprints</figcaption>
           <img
             :sizes="sizes"
             srcset="
@@ -258,7 +253,6 @@ import { PTPerfect as project } from 'src/data/projects';
         <template #description> </template>
 
         <template #figure="{ sizes }">
-          <figcaption>Regimen Edit</figcaption>
           <img
             :sizes="sizes"
             srcset="
@@ -329,7 +323,10 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Blueprints Clone Edit -->
       <ProjectPageCard>
-        <template #description> </template>
+        <!-- <template #heading></template> -->
+        <template #description
+          >Still fixing the UI after migrating 3 version of Laravel</template
+        >
 
         <template #figure="{ sizes }">
           <figcaption>Clone Edit</figcaption>
@@ -384,7 +381,12 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- DB Relations -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description>
+        <p>
+          While not representing the database in it's entirety, it helps
+          illustrate the relations between Users and Blueprints and why it is possible to clone from Blueprints to Users.
+        </p>
+        </template>
 
         <template #figure="{ sizes }">
           <figcaption>Simplified DB Relations</figcaption>
@@ -404,7 +406,10 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Tests -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description
+          >The incomplete tests are related to client onboarding. They are there
+          to help remind me where I am up to.</template
+        >
 
         <template #figure="{ sizes }">
           <figcaption>Backend Tests</figcaption>
