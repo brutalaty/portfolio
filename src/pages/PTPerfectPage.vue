@@ -157,7 +157,6 @@ import { PTPerfect as project } from 'src/data/projects';
         <template #description> </template>
 
         <template #figure="{ sizes }">
-          <figcaption>Videos</figcaption>
           <img
             :sizes="sizes"
             srcset="
