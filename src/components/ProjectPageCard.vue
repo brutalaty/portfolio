@@ -2,12 +2,19 @@
 //below 1024 window, image is 100w
 // at >= 1024 window width. image is 51w
 //1024px * .51 w
-import { useSlots } from 'vue';
+import { useSlots, computed } from 'vue';
 const slots = useSlots();
+
+const hasBody = computed(() => slots?.heading || slots?.description);
+const bodyHidden = computed(() =>
+  !hasBody.value
+    ? 'project-page-card-body-hidden'
+    : 'project-page-card-alternate'
+);
 </script>
 
 <template>
-  <div class="project-page-card">
+  <div class="project-page-card" :class="bodyHidden">
     <figure class="project-page-card__figure">
       <slot name="figure" sizes="(min-width: 1024) 51w, 100w">
         <figcaption>
@@ -35,8 +42,8 @@ const slots = useSlots();
 <style lang="sass">
 @use "sass:math"
 $card-background: darken($light-page, 5%)
+$image-max-width-percent: 51
 .project-page-card
-  $image-max-width-percent: 51
   display: flex
   flex-direction: column
   width: 100%
@@ -84,7 +91,7 @@ $card-background: darken($light-page, 5%)
   @media(min-width: $breakpoint-md-min)
     max-width: 100%
     flex-direction: row
-    &:nth-child(even of .project-page-card)
+    &:nth-child(even of .project-page-card-alternate)
       flex-direction: row-reverse
 
     & img
@@ -98,4 +105,12 @@ $card-background: darken($light-page, 5%)
     &__body
       width: math.percentage((100 - $image-max-width-percent) / 100)
       text-align: center
+
+.project-page-card.project-page-card-body-hidden
+    justify-content: center
+    max-width: $max-width * ($image-max-width-percent / 100)
+    & img, figure
+        width: 100%
+    .project-page-card__body
+        display: none
 </style>
