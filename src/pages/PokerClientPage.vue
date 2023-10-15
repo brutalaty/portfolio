@@ -201,10 +201,12 @@ import { pokerThickClient as project } from 'src/data/projects';
             From here they can create new players, register players, enter
             finishing placements and open the game clock. You can see the
             placements list in the
-            <a href="#create-results-4">next panel</a> and you can see a preview
-            of the Game Clock on the
-            <router-link to="poker-game-clock"
-              ><strong>Game Clock</strong> Page.</router-link
+            <q-btn href="#create-results-4" flat dense color="primary"
+              >next panel</q-btn
+            >
+            and you can see a preview of the Game Clock on the
+            <q-btn :to="{ name: 'poker-game-clock' }" flat dense color="primary"
+              >Game Clock Page</q-btn
             >
           </p>
           <p>
@@ -264,7 +266,7 @@ import { pokerThickClient as project } from 'src/data/projects';
         <template #description>
           <p>There are three roles for staff:</p>
 
-          <ul>
+          <ul class="project-inline-list">
             <li><strong>Owner </strong> has all permissions</li>
             <li>
               <strong>Technician</strong> has all permissions but cannot edit
@@ -338,18 +340,4 @@ import { pokerThickClient as project } from 'src/data/projects';
   </q-page>
 </template>
 
-<style lang="sass">
-.project-inline-list
-  display: flex
-  flex-wrap: wrap
-  padding: 0 2.5rem
-  margin: 2rem 0
-  justify-content: center
-  &__item
-    display: inline-block
-    white-space: nowrap
-    margin: 0 1rem
-    padding: 0 .2rem
-    border-bottom: inset 1px #411
-    font-style: italic
-</style>
+<style lang="sass"></style>
