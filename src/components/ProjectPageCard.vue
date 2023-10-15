@@ -17,7 +17,10 @@ const slots = useSlots();
       </slot>
     </figure>
 
-    <div class="project-page-card__body">
+    <div
+      class="project-page-card__body"
+      v-if="slots.heading || slots.description"
+    >
       <h2 v-if="slots.heading" class="project-page-card__heading text-h6">
         <slot name="heading"></slot>
       </h2>
