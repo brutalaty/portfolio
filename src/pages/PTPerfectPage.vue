@@ -15,6 +15,10 @@ import { PTPerfect as project } from 'src/data/projects';
         <template #heading> git init </template>
         <template #description>
           <p>This project was started sometime early 2020.</p>
+          <p>
+            PTPerfect is the projects name while in development and although it
+            has a nice ring to it, it's a little ambiguous.
+          </p>
         </template>
 
         <template #figure="{ sizes }">
@@ -30,11 +34,24 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
-      <!--  -->
+      <!-- Delay Note -->
+      <InfoCard
+        ><p>
+          Five months after starting Ptperfect, For personal reasons it had to
+          be shelved.
+        </p>
+        <p class="q-mb-none">
+          <strong>2+ years later</strong>, I now have some spare time and I'm
+          back to developing this project.
+        </p></InfoCard
+      >
 
       <!-- Dashboard -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description
+          >The dashboard is very basic, once more or all of the trainers
+          features have been implemented, the dash will be redesigned.</template
+        >
 
         <template #figure="{ sizes }">
           <img
@@ -49,9 +66,18 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
+      <!-- Migration Note -->
+      <InfoCard>
+        The tech industry moves fast, in the time this project was shelved,
+        Laravel had managed to move 3 major releases ahead of Ptperfect.
+      </InfoCard>
+
       <!-- Invite -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description
+          >Settling for the minimal viable product, Ptperfect will be invite
+          only</template
+        >
 
         <template #figure="{ sizes }">
           <img
@@ -66,9 +92,24 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
+      <InfoCard>
+        <p>
+          Aside from having to migrate from Laravel 7 up to Laravel 10, a lot of
+          the projects dependencies had become abandoned.
+        </p>
+        <p>
+          Updating dependencies, finding alternatives and implementing my own
+          solutions took quite some time.
+        </p>
+      </InfoCard>
+
       <!-- Email -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description
+          >Here we have a preview of the E-Mail sent to our friendly client
+          asdasd. He will be asked to set a password to start using his
+          account.</template
+        >
 
         <template #figure="{ sizes }">
           <figcaption>Invitation Email</figcaption>
@@ -85,7 +126,7 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Movements -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description></template>
 
         <template #figure="{ sizes }">
           <img
@@ -229,7 +270,9 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Blueprints Show -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description>
+          <p>* not yet redesigned.</p>
+        </template>
 
         <template #figure="{ sizes }">
           <figcaption>Blueprints Show</figcaption>
@@ -249,7 +292,13 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Regimen Edit -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description>
+          <p>
+            A trainer can reorder the regimen for a client or blueprint and can
+            transfer ownership(under revision).
+          </p>
+          <p>* Not yet redesigned.</p>
+        </template>
 
         <template #figure="{ sizes }">
           <img
@@ -266,7 +315,16 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Blueprints Clone Show -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description>
+          <p>
+            Blueprints have the soul purpose of being cloned onto clients
+            regimens. Trainers can setup a blueprint for common problems and
+            clone them onto a client who has a similar issue and then make
+            adjustments.
+          </p>
+
+          <p>Blueprints can also be cloned onto other blueprints.</p>
+        </template>
 
         <template #figure="{ sizes }">
           <figcaption>Blueprints Clone Selection</figcaption>
@@ -284,26 +342,7 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Blueprints Clone Show Dialog -->
       <ProjectPageCard>
-        <template #description> </template>
-
-        <template #figure="{ sizes }">
-          <figcaption>Clone Selection Dialog</figcaption>
-          <img
-            :sizes="sizes"
-            srcset="
-              images/ptperfect/17-blueprints-clone-show-dialog_yn8omn_c_scale,w_350.png   350w,
-              images/ptperfect/17-blueprints-clone-show-dialog_yn8omn_c_scale,w_830.png   830w,
-              images/ptperfect/17-blueprints-clone-show-dialog_yn8omn_c_scale,w_1000.png 1000w
-            "
-            src="images/ptperfect/17-blueprints-clone-show-dialog_yn8omn_c_scale,w_1000.png"
-            alt=""
-          />
-        </template>
-      </ProjectPageCard>
-
-      <!-- Blueprints Clone Show Dialog -->
-      <ProjectPageCard>
-        <template #description> </template>
+        <!-- <template #description> </template> -->
 
         <template #figure="{ sizes }">
           <figcaption>Clone Selection Dialog</figcaption>
@@ -343,7 +382,11 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Regimens Show Edit Dialog -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description
+          >Each Program (or fortnight) has 2 Routines attached and are meant to
+          be alternated each day. When a Trainer selects Edit on a Program, they
+          get the option of which routine they want to edit.</template
+        >
 
         <template #figure="{ sizes }">
           <figcaption>Edit Routine Dialog</figcaption>
@@ -361,7 +404,9 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Routine Edit -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description>
+          <p>* not yet redesigned.</p>
+        </template>
 
         <template #figure="{ sizes }">
           <figcaption>Routine Edit</figcaption>
