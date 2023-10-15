@@ -4,11 +4,13 @@
     class="button button-website"
     color="primary"
     target="_blank"
+    icon-right="open_in_new"
+    label="Website"
   >
-    Website
-    <i class="button-icon button-icon-right material-icons">open_in_new</i>
-    <!-- <i
-      class="button-icon button-icon-right fa-solid fa-up-right-from-square"
-    ></i> -->
   </q-btn>
 </template>
+
+<style lang="sass">
+.button-website .q-icon
+  font-size: 1.3rem
+</style>

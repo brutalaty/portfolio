@@ -3,11 +3,13 @@
     data-test="router-link-button"
     class="button button-more"
     color="primary"
+    icon-right="trending_flat"
+    label="More"
   >
-    More
-    <i class="button-icon button-icon-right material-icons">trending_flat</i>
-    <!-- <i class="button-icon button-icon-right fa-solid fa-arrow-right-long"></i> -->
   </q-btn>
 </template>
 
-<style lang="sass"></style>
+<style lang="sass">
+.button-more .q-icon
+  font-size: 1.5rem
+</style>

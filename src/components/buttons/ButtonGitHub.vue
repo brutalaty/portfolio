@@ -3,13 +3,10 @@
     data-test="repository-link-button"
     :href="url"
     target="_blank"
+    label="Repo"
+    icon-right="img:images/github-mark/github-mark-white.svg"
     class="button button-github"
   >
-    Repo
-    <img
-      class="button-icon-right button-icon-svg"
-      src="images/github-mark/github-mark-white.svg"
-    />
   </q-btn>
 </template>
 
@@ -25,4 +22,6 @@ defineProps({
 <style lang="sass">
 .button-github
   background: #161b22
+  .q-icon
+    font-size: 1.4rem
 </style>
