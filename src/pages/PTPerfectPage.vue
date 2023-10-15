@@ -381,10 +381,11 @@ import { PTPerfect as project } from 'src/data/projects';
       <!-- DB Relations -->
       <ProjectPageCard>
         <template #description>
-        <p>
-          While not representing the database in it's entirety, it helps
-          illustrate the relations between Users and Blueprints and why it is possible to clone from Blueprints to Users.
-        </p>
+          <p>
+            While not representing the database in it's entirety, it helps
+            illustrate the relations between Users and Blueprints and why it is
+            possible to clone from Blueprints to Users.
+          </p>
         </template>
 
         <template #figure="{ sizes }">
@@ -406,8 +407,9 @@ import { PTPerfect as project } from 'src/data/projects';
       <!-- Tests -->
       <ProjectPageCard>
         <template #description
-          >The incomplete tests are related to client onboarding. They are there
-          to help remind me where I am up to.</template
+          >The incomplete tests are related to client onboarding, which is not
+          yet implemented. They are there to help remind which feature/'s I'm up
+          to implementing.</template
         >
 
         <template #figure="{ sizes }">
