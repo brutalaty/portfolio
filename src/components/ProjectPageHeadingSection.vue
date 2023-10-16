@@ -33,5 +33,5 @@ defineProps({
     margin-bottom: 0
   &_tech
     margin-bottom: 1rem
-  &_nav
+  // &_nav
 </style>
