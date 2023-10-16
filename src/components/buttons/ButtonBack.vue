@@ -1,9 +1,18 @@
+<script setup>
+const props = defineProps({
+  label: {
+    type: String,
+    default: 'Back',
+  },
+});
+</script>
+
 <template>
   <q-btn
     data-test="home-link-button"
     class="button button-home"
     color="primary"
-    label="Back"
+    :label="label"
     icon="fa-solid fa-arrow-left"
   >
   </q-btn>
