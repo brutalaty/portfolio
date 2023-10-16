@@ -74,10 +74,18 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Invite -->
       <ProjectPageCard>
-        <template #description
-          >Settling for the minimal viable product, Ptperfect will be invite
-          only</template
-        >
+        <template #description>
+          <p>
+            Settling for the minimal viable product, Ptperfect will be invite
+            only until client onboarding, appointment scheduling and integrated
+            video chat are implemented.
+          </p>
+
+          <p>
+            Appointment Scheduling has been implemented, however due to a
+            dependency being outdated, it has been benched for a time.
+          </p>
+        </template>
 
         <template #figure="{ sizes }">
           <img
@@ -93,14 +101,8 @@ import { PTPerfect as project } from 'src/data/projects';
       </ProjectPageCard>
 
       <InfoCard>
-        <p>
-          Aside from having to migrate from Laravel 7 up to Laravel 10, a lot of
-          the projects dependencies had become abandoned.
-        </p>
-        <p>
-          Updating dependencies, finding alternatives and implementing my own
-          solutions took quite some time.
-        </p>
+        Aside from having to migrate from Laravel 7 up to Laravel 10, a lot of
+        the projects dependencies had become abandoned.
       </InfoCard>
 
       <!-- Email -->
@@ -124,9 +126,30 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
+      <InfoCard>
+        Updating dependencies, finding alternatives and implementing my own
+        solutions, it took quite some time. A valuable lesson in dependency
+        management.
+      </InfoCard>
+
       <!-- Movements -->
       <ProjectPageCard>
-        <template #description></template>
+        <template #description>
+          <p>
+            The ways in which we are able to move, when broken down into their
+            simplest forms, are called Movement Patterns.
+          </p>
+          <p>
+            It is quite the complex subject but here is a tldr, some problems
+            can be corrected by performing the right movement patterns in the
+            right area of the body.
+          </p>
+          <p>
+            In relation to the rest of the application, Movement Patterns help
+            the trainer categorize exercises, making it easier and faster to put
+            together a regimen.
+          </p>
+        </template>
 
         <template #figure="{ sizes }">
           <img
@@ -143,7 +166,11 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Equipment Index -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description>
+          Each exercise may need some Equipment, clients will be warned in
+          advance of upcoming equipment requirements so that they have enough
+          time to acquire them.
+        </template>
 
         <template #figure="{ sizes }">
           <img
@@ -160,7 +187,10 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Equipment Show -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description
+          >Each Equipment has URLs attached to them, assisting the clients to
+          identify what the item is and possible online vendors.</template
+        >
 
         <template #figure="{ sizes }">
           <figcaption>Equipment Show</figcaption>
@@ -176,10 +206,12 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
+      <InfoCard>
+        A <strong>Report broken link</strong> button is a planned feature.
+      </InfoCard>
+
       <!-- Equipment Edit -->
       <ProjectPageCard>
-        <template #description> </template>
-
         <template #figure="{ sizes }">
           <img
             :sizes="sizes"
@@ -195,7 +227,13 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Videos -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description>
+          <p>At the heart of the project are the exercises or Videos.</p>
+          <p>
+            This is from the trainers point of view. Clients will view video's
+            through their current fortnights routines.
+          </p>
+        </template>
 
         <template #figure="{ sizes }">
           <img
@@ -213,9 +251,25 @@ import { PTPerfect as project } from 'src/data/projects';
         </template>
       </ProjectPageCard>
 
+      <InfoCard>
+        These fake images are generated when from a list of youtube video
+        thumbnails, they are of course, not the final product.
+      </InfoCard>
+
       <!-- Videos Show -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description>
+          <p>
+            The content of each video will have detailed instructions on how to
+            perform each exercise, for example, which muscles should be engaged.
+          </p>
+          <p>
+            A client will have the ability to attach questions to an exercise
+            and to flag a Video as too easy or too hard. Their trainer will be
+            able to respond to any questions and also regress or progress
+            exercises to change the difficulty level.
+          </p>
+        </template>
 
         <template #figure="{ sizes }">
           <figcaption>Videos Show</figcaption>
@@ -236,8 +290,6 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Videos Edit -->
       <ProjectPageCard>
-        <template #description> </template>
-
         <template #figure="{ sizes }">
           <img
             :sizes="sizes"
@@ -253,8 +305,16 @@ import { PTPerfect as project } from 'src/data/projects';
 
       <!-- Blueptints -->
       <ProjectPageCard>
-        <template #description> </template>
+        <template #description>
+          <p>
+            Blueprints have the soul purpose of being cloned onto clients
+            regimens. Trainers can setup a blueprint for common problems and
+            clone them onto a client who has a similar issue and then make
+            adjustments.
+          </p>
 
+          <p>Blueprints can also be cloned onto other blueprints.</p>
+        </template>
         <template #figure="{ sizes }">
           <img
             :sizes="sizes"
@@ -317,13 +377,10 @@ import { PTPerfect as project } from 'src/data/projects';
       <ProjectPageCard>
         <template #description>
           <p>
-            Blueprints have the soul purpose of being cloned onto clients
-            regimens. Trainers can setup a blueprint for common problems and
-            clone them onto a client who has a similar issue and then make
-            adjustments.
+            Blueprints simulate a Client without any of the events or
+            notifications that would fire by directly editing a Client's
+            Regimen. This red
           </p>
-
-          <p>Blueprints can also be cloned onto other blueprints.</p>
         </template>
 
         <template #figure="{ sizes }">
@@ -363,7 +420,8 @@ import { PTPerfect as project } from 'src/data/projects';
       <ProjectPageCard>
         <!-- <template #heading></template> -->
         <template #description
-          >Still fixing the UI after migrating 3 version of Laravel</template
+          >Still fixing the broken UI after migrating 3 version of
+          Laravel</template
         >
 
         <template #figure="{ sizes }">
@@ -405,6 +463,17 @@ import { PTPerfect as project } from 'src/data/projects';
       <!-- Routine Edit -->
       <ProjectPageCard>
         <template #description>
+          <p>
+            When editing a routine, a trainer has the ability to reorder, swap
+            out videos, add and remove videos, override the default sets and
+            reps, add additional instructions. Ontop of this they have the
+            ability to change ownership and add instructions to the routine
+            itself.
+          </p>
+          <p>
+            While it is only editing a single resource, this page is overly
+            complicated and will need to be split up.
+          </p>
           <p>* not yet redesigned.</p>
         </template>
 
@@ -466,6 +535,12 @@ import { PTPerfect as project } from 'src/data/projects';
           />
         </template>
       </ProjectPageCard>
+
+      <InfoCard>
+        While a little late to implement testing for Vue 2, I have plans to
+        upgrade to Vue 3 and wrap it in vitest. While not 'test driven', it will
+        give me a measure of comfort when refactoring.
+      </InfoCard>
     </div>
   </q-page>
 </template>
