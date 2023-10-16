@@ -2,6 +2,7 @@
 import ProjectPageHeadingSection from 'src/components/ProjectPageHeadingSection.vue';
 import ProjectPageCard from 'src/components/ProjectPageCard.vue';
 import InfoCard from 'src/components/InfoCard.vue';
+import BackButton from 'src/components/buttons/ButtonBack.vue';
 
 import { PTPerfect as project } from 'src/data/projects';
 </script>
@@ -537,10 +538,12 @@ import { PTPerfect as project } from 'src/data/projects';
       </ProjectPageCard>
 
       <InfoCard>
-        While a little late to implement testing for Vue 2, I have plans to
-        upgrade to Vue 3 and wrap it in vitest. While not 'test driven', it will
-        give me a measure of comfort when refactoring.
+        The backend was built using <strong>test driven development</strong>,
+        however the Vue 2 frontend was not. I am planning to implement tests
+        around the frontend as I migrate to Vue 3 using Vitest.
       </InfoCard>
+
+      <BackButton label="Index Page"></BackButton>
     </div>
   </q-page>
 </template>
