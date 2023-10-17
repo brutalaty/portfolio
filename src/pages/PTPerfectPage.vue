@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import { useRouter, Router } from 'vue-router';
 import ProjectPageHeadingSection from 'src/components/ProjectPageHeadingSection.vue';
 import ProjectPageCard from 'src/components/ProjectPageCard.vue';
 import InfoCard from 'src/components/InfoCard.vue';
 import BackButton from 'src/components/buttons/ButtonBack.vue';
 
 import { PTPerfect as project } from 'src/data/projects';
+
+const router: Router = useRouter();
+
+function handleBackButtonClick() {
+  router.push('/');
+}
 </script>
 
 <template>
@@ -543,7 +550,10 @@ import { PTPerfect as project } from 'src/data/projects';
         around the frontend as I migrate to Vue 3 using Vitest.
       </InfoCard>
 
-      <BackButton label="Index Page"></BackButton>
+      <BackButton
+        label="Index Page"
+        @click="handleBackButtonClick"
+      ></BackButton>
     </div>
   </q-page>
 </template>
